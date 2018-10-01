@@ -13,3 +13,5 @@ channel.basic_publish(exchange='',
                   body='Hello W0rld!')
 print(" [x] Sent 'Hello World!'")
 connection.close()
+
+# docker run -d --hostname my-rabbit --name some-rabbit -p 8080:15672 -p 5672:5672s rabbitmq:3-management

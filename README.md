@@ -1,5 +1,35 @@
 # rabbitmq-test
 
+
+## Setup rabbitmq
+
+Run a rabbitmq docker container:
+
+    $ docker run -d --hostname my-rabbit --name some-rabbit -p 8080:15672 -p 5672:5672 -p 5671:5671 rabbitmq:3-management
+
+Note the port 5672 is what is used in udemy-example1.py & udemy-example2.py
+
+View Dashboard:
+
+    http://localhost:8080
+
+
+## Setup python environment with virtualenv
+
+Setup environment env
+
+    $ virtualenv env
+
+Activate virtualenv
+
+    $ source env/bin/activate
+
+Install requirements
+
+    $ pip install -r requirements.txt
+
+## Run python code using pika library
+
 Currently the working examples are in the "working-examples" folder
 
 Run these two together:
